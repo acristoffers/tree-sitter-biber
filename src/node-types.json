@@ -10,10 +10,14 @@
     "fields": {},
     "children": {
       "multiple": true,
-      "required": false,
+      "required": true,
       "types": [
         {
           "type": "comment",
+          "named": true
+        },
+        {
+          "type": "name",
           "named": true
         }
       ]
@@ -25,7 +29,7 @@
     "fields": {},
     "children": {
       "multiple": true,
-      "required": false,
+      "required": true,
       "types": [
         {
           "type": "field",
@@ -48,7 +52,7 @@
     "fields": {},
     "children": {
       "multiple": true,
-      "required": false,
+      "required": true,
       "types": [
         {
           "type": "identifier",
@@ -82,8 +86,12 @@
     "fields": {},
     "children": {
       "multiple": true,
-      "required": false,
+      "required": true,
       "types": [
+        {
+          "type": "name",
+          "named": true
+        },
         {
           "type": "value",
           "named": true
@@ -131,7 +139,7 @@
     "named": true,
     "fields": {},
     "children": {
-      "multiple": true,
+      "multiple": false,
       "required": false,
       "types": [
         {
@@ -147,10 +155,14 @@
     "fields": {},
     "children": {
       "multiple": true,
-      "required": false,
+      "required": true,
       "types": [
         {
           "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "name",
           "named": true
         },
         {
@@ -166,17 +178,12 @@
     "fields": {}
   },
   {
-    "type": "text_brace_balanced",
-    "named": true,
-    "fields": {}
-  },
-  {
     "type": "value",
     "named": true,
     "fields": {},
     "children": {
       "multiple": true,
-      "required": false,
+      "required": true,
       "types": [
         {
           "type": "identifier",
@@ -194,19 +201,15 @@
     }
   },
   {
-    "type": "comment",
-    "named": true
-  },
-  {
-    "type": "@",
+    "type": "\"",
     "named": false
   },
   {
-    "type": "{",
+    "type": "#",
     "named": false
   },
   {
-    "type": "}",
+    "type": "'",
     "named": false
   },
   {
@@ -218,11 +221,15 @@
     "named": false
   },
   {
+    "type": ",",
+    "named": false
+  },
+  {
     "type": "=",
     "named": false
   },
   {
-    "type": ",",
+    "type": "@",
     "named": false
   },
   {
@@ -230,19 +237,15 @@
     "named": true
   },
   {
-    "type": "#",
-    "named": false
-  },
-  {
     "type": "integer",
     "named": true
   },
   {
-    "type": "\"",
+    "type": "{",
     "named": false
   },
   {
-    "type": "'",
+    "type": "}",
     "named": false
   }
 ]

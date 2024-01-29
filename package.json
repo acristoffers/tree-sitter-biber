@@ -2,7 +2,7 @@
   "name": "tree-sitter-biber",
   "version": "0.6.3",
   "description": "Tree sitter grammar for biber",
-  "main": "index.js",
+  "main": "bindings/node",
   "repository": "https://github.com/Aerijo/tree-sitter-biber",
   "bugs": "https://github.com/Aerijo/tree-sitter-biber/issues",
   "keywords": [
