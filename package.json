@@ -3,6 +3,7 @@
   "version": "0.6.3",
   "description": "Tree sitter grammar for biber",
   "main": "bindings/node",
+  "types": "bindings/node",
   "repository": "https://github.com/Aerijo/tree-sitter-biber",
   "bugs": "https://github.com/Aerijo/tree-sitter-biber/issues",
   "keywords": [
@@ -14,22 +15,41 @@
     "lexer",
     "tree-sitter"
   ],
+  "files": [
+    "grammar.js",
+    "binding.gyp",
+    "prebuilds/**",
+    "bindings/node/*",
+    "queries/*",
+    "src/**"
+  ],
   "author": "Benjamin Gray",
   "license": "MIT",
   "dependencies": {
-    "nan": "^2.14.0",
-    "prebuild-install": "^5.3.0"
+    "prebuild-install": "^5.3.0",
+    "node-addon-api": "^7.1.0",
+    "node-gyp-build": "^4.8.0"
+  },
+  "peerDependencies": {
+    "tree-sitter": "^0.21.0"
+  },
+  "peerDependenciesMeta": {
+    "tree_sitter": {
+      "optional": true
+    }
   },
   "devDependencies": {
     "prebuild": "^9.0.1",
-    "tree-sitter-cli": "^0.15.5"
+    "tree-sitter-cli": "^0.15.5",
+    "prebuildify": "^6.0.0"
   },
   "scripts": {
     "postversion": "git push --follow-tags",
     "build": "tree-sitter generate && node-gyp build",
-    "install": "prebuild-install || node-gyp rebuild",
+    "install": "node-gyp-build",
     "pre-build": "prebuild --all --strip --verbose",
     "pre-build:upload": "prebuild --upload-all",
-    "test": "tree-sitter test"
+    "test": "tree-sitter test",
+    "prebuildify": "prebuildify --napi --strip"
   }
 }
